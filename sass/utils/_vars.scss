@@ -1,0 +1,24 @@
+/* Фон страниц background: #ffffff; */
+/* Основной цвет текста color: #757575; */
+/* Вторичный цвет текста color: #212121; */
+/* Цвет уникалных текстовых элементов color: #2196F3; */
+/* Цвет кнопок при наведении и в hero #2196F3*/
+:root {
+  --primery-text-color: #757575;
+  --secondary-text-color: #212121;
+  --element-text-color: #ffffff;
+  --accent-text-color: #2196f3;
+  --element2-text-color: #afb1b8;
+  --primary-background-color: #ffffff;
+  --secondary-bg-color: #2f303a;
+  --accent-bg-color: #2196f3;
+  --button-primery-text-color: #ffffff;
+  --button-primery-bcg-color: #2196f3;
+  --button-secondary-bcg-color: #f5f4fa;
+  --shadow-element-color: #00000015;
+  --header-bottom-border: #eeeeee;
+  --backdrop-bcg-color: #00000033;
+  --modal-icons-color: #000000;
+  // animation-root
+  --animation-set: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

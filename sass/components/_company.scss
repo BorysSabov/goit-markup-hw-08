@@ -1,0 +1,89 @@
+.company {
+  background-color: var(--button-secondary-bcg-color);
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: var(--secondary-text-color);
+  }
+}
+.team {
+  display: flex;
+  &__member {
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--primary-background-color);
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.125),
+      0 1px 1px 0 rgba(0, 0, 0, 0.078), 0 1px 3px 0 rgba(0, 0, 0, 0.071);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.teammate {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &__title {
+    margin: 0;
+    padding-bottom: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    color: var(--secondary-text-color);
+    background-color: var(--primary-background-color);
+  }
+  &__text {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 16px;
+    list-style: none;
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--primary-background-color);
+    transition: background-color var(--animation-set);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-bg-color);
+    }
+  }
+  &__social-icon {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    fill: var(--element2-text-color);
+    transition: fill var(--animation-set);
+    .teammate__social-link:hover &,
+    .teammate__social-link:focus & {
+      fill: var(--primary-background-color);
+    }
+  }
+}

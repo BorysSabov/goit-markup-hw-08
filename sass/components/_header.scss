@@ -1,0 +1,93 @@
+.page-header__nav-page {
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid var(--header-bottom-border);
+}
+.site-nav {
+  display: flex;
+  position: relative;
+    &__logo {
+      padding-top: 25px;
+      padding-bottom: 24px;
+      font-family: Raleway, sans-serif;
+      font-size: 26px;
+      line-height: 1.2;
+      text-decoration: none;
+      color: var(--secondary-text-color);
+    }
+}
+
+.link-nav {
+  display: flex;
+  margin-left: 90px;
+    &__item {
+      margin-left: 50px;
+    }
+    &__link {
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      color: var(--secondary-text-color);
+      transition: color var(--animation-set);
+        &:hover,
+        &:focus {
+          color: var(--accent-text-color);
+        }
+        &--current {
+          color: var(--accent-text-color);
+        }
+    }
+}
+.auth-nav {
+  margin-left: auto;
+  display: flex;
+    &__item {
+      margin-left: 30px;
+    }
+    &__phone-icon {
+      vertical-align: middle;
+      width: 10px;
+      height: 16px;
+      margin-right: 10px;
+      fill: var(--primery-text-color);
+      transition: fill var(--animation-set);
+        .auth-nav__link:hover &,
+        .auth-nav__link:focus & {
+         fill: var(--accent-bg-color);
+        }
+    }
+    &__mail-icon {
+      vertical-align: middle;
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      fill: var(--primery-text-color);
+      transition: fill var(--animation-set);
+        .auth-nav__link:hover &,
+        .auth-nav__link:focus & {
+          fill: var(--accent-bg-color);
+        }
+        
+    }
+    &__link {
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      color: var(--primery-text-color);
+      transition: color var(--animation-set);
+        &:hover,
+        &:focus {
+          color: var(--accent-text-color);
+        }
+    }
+}

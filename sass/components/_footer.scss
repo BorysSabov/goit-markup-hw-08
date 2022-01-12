@@ -1,0 +1,157 @@
+.footer {
+  background-color: var(--secondary-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__content {
+    display: flex;
+  }
+}
+.footer-box__logo {
+  display: block;
+  margin-bottom: 20px;
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--primary-background-color);
+  &--accent {
+    color: var(--accent-text-color);
+  }
+}
+.adress {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--element-text-color);
+  font-style: normal;
+}
+.auth-footer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &__info:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color var(--animation-set);
+    &:hover,
+    &:focus {
+      color: var(--accent-text-color);
+    }
+  }
+}
+.footer-social {
+  margin-left: 70px;
+  &__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    padding: 0;
+    color: var(--primary-background-color);
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    display: flex;
+    border-radius: 50%;
+    transition: background-color var(--animation-set);
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.063);
+    fill: var(--primary-background-color);
+    transition: background-color var(--animation-set);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-bg-color);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    fill: #afb1b8;
+    transition: fill var(--animation-set);
+    .footer-social__link & {
+      fill: var(--primary-background-color);
+    }
+  }
+}
+.footer-submit {
+  margin-left: 93px;
+  &__text {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--primary-background-color);
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 15px 16px;
+    color: var(--primary-background-color);
+    background-color: var(--secondary-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: border var(--animation-set);
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    &:hover {
+      border-color: var(--accent-bg-color);
+    }
+  }
+  &__button {
+    display: block;
+    margin: auto;
+    min-width: 200px;
+    min-height: 50px;
+    padding: 10px 29px;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: 0 4px 4px 0 var(--shadow-element-color);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--element-text-color);
+    background-color: var(--button-primery-bcg-color);
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+}

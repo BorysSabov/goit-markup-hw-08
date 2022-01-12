@@ -1,0 +1,19 @@
+// variables
+@import "./base/vars";
+// base-style
+@import "./base/reset";
+@import "./base/base-style";
+// components
+@import "./components/header";
+@import "./components/hero";
+@import "./components/primary";
+@import "./components/works-list";
+@import "./components/company";
+@import "./components/clients";
+@import "./components/footer";
+// modal components
+@import "./components/modal";
+@import "./components/form";
+// portfolio components
+@import "./components/portfolio-btn-list";
+@import "./components/portfolio-card-list";

@@ -1,0 +1,141 @@
+.form {
+  width: 528px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  &__title {
+    display: block;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+}
+
+.form-item {
+  margin-bottom: 10px;
+  &__field {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    position: relative;
+  }
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  &__input {
+    width: 448px;
+    height: 44px;
+    border-radius: 4px;
+    outline: 1px solid #75757580;
+    border-width: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+    position: relative;
+    transition: outline-color var(--animation-set);
+    &:hover,
+    &:focus {
+      outline-color: var(--accent-bg-color);
+    }
+  }
+}
+
+.form-item__icon {
+  display: flex;
+  position: absolute;
+  top: 33px;
+  left: 15px;
+  fill: var(--modal-icons-color);
+  transition: fill var(--animation-set);
+  .form-item__input:hover + &,
+  .form-item__input:focus + & {
+    fill: var(--accent-text-color);
+  }
+}
+.form-comment {
+  margin-bottom: 20px;
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  &__text {
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;
+    border-radius: 4px;
+    border-width: 0;
+    resize: none;
+    outline: 1px solid rgba(117, 117, 117, 0.5);
+    transition: outline-color var(--animation-set);
+    &:hover,
+    &:focus {
+      outline-color: var(--accent-bg-color);
+    }
+  }
+}
+
+.form-checkbox {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 30px;
+  &__field {
+    width: 425px;
+    height: 24px;
+  }
+  &__input {
+    position: relative;
+    &:hover + .form-checkbox__icon,
+    &:focus + .form-checkbox__icon {
+      border-color: var(--accent-bg-color);
+    }
+    &:checked + .form-checkbox__icon {
+      background-image: url(../img/SVG/yes-icon.svg);
+      background-color: var(--accent-bg-color);
+      border-color: var(--accent-bg-color);
+    }
+  }
+  &__icon {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    top: 6px;
+    left: 10px;
+    border: 2px solid var(--modal-icons-color);
+    border-radius: 3px;
+    transition: background-image var(--animation-set),
+      border-color var(--animation-set), background-color var(--animation-set);
+  }
+  &__text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+    padding-left: 33px;
+  }
+  &__link {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+    color: var(--accent-bg-color);
+  }
+}
