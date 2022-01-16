@@ -28,6 +28,15 @@
           <a href="/" class="site-nav__logo">
             <span class="site-nav__logo--accent">Web</span>Studio</a
           >
+          <!-- Mobile-menu -->
+          <!-- <div class="container">
+            <button type="button" class="menu-button">
+              <svg>
+                <use href="./img/SVG/mo"></use>
+              </svg>
+            </button>
+            <div class="menu-container" id="menu-container" data-menu></div>
+          </div> -->
           <ul class="link-nav">
             <li class="link-nav__item">
               <a
@@ -241,7 +250,7 @@
 
       <!--Чем занимаемся-->
 
-      <section class="section">
+      <section class="section hidden">
         <div class="container">
           <h2 class="works__title">Чем мы занимаемся</h2>
           <ul class="works">
@@ -292,7 +301,7 @@
               <img
                 src="./img/ihor-demyanenko.jpg"
                 alt="Игорь Демьяненко"
-                width="270"
+                class="team__photo"
               />
               <div class="teammate">
                 <h3 class="teammate__title">Игорь Демьяненко</h3>
@@ -354,7 +363,11 @@
               </div>
             </li>
             <li class="team__member">
-              <img src="./img/olha-repina.jpg" alt="Ольга Репина" width="270" />
+              <img
+                src="./img/olha-repina.jpg"
+                alt="Ольга Репина"
+                class="team__photo"
+              />
               <div class="teammate">
                 <h3 class="teammate__title">Ольга Репина</h3>
                 <p class="teammate__text">Frontend Developer</p>
@@ -418,7 +431,7 @@
               <img
                 src="./img/nikolay-tarasov.jpg"
                 alt="Николай Тарасов"
-                width="270"
+                class="team__photo"
               />
               <div class="teammate">
                 <h3 class="teammate__title">Николай Тарасов</h3>
@@ -483,7 +496,7 @@
               <img
                 src="./img/mikhail-ermakov.jpg"
                 alt="Михаил Ермаков"
-                width="270"
+                class="team__photo"
               />
               <div class="teammate">
                 <h3 class="teammate__title">Михаил Ермаков</h3>
@@ -672,19 +685,19 @@
                   name="email"
                   placeholder="E-mail"
                 />
+                <button type="submit" class="footer-submit__button">
+                  Подписаться
+                  <svg class="footer-submit__icon">
+                    <use href="./img/SVG/modal-icon-spt.svg#icon-send"></use>
+                  </svg>
+                </button>
               </label>
-              <button type="submit" class="footer-submit__button">
-                Подписаться
-                <svg class="footer-submit__icon">
-                  <use href="./img/SVG/modal-icon-spt.svg#icon-send"></use>
-                </svg>
-              </button>
             </form>
           </div>
         </div>
       </div>
     </footer>
-
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
