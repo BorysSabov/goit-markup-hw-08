@@ -1,93 +1,165 @@
 .page-header__nav-page {
   align-items: center;
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid var(--header-bottom-border);
 }
 .site-nav {
-  display: flex;
-  position: relative;
-    &__logo {
-      padding-top: 25px;
-      padding-bottom: 24px;
-      font-family: Raleway, sans-serif;
-      font-size: 26px;
-      line-height: 1.2;
-      text-decoration: none;
-      color: var(--secondary-text-color);
-    }
+  // display: flex;
+  // position: relative;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }
-
+.mobile-menu {
+  display: block;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  top: 0;
+  right: 0;
+  border: unset;
+  background-color: var(--primary-background-color);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+.site-nav__logo {
+  padding-top: 25px;
+  padding-bottom: 24px;
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
 .link-nav {
-  display: flex;
-  margin-left: 90px;
-    &__item {
-      margin-left: 50px;
+  &__item {
+    margin-left: 50px;
+  }
+  &__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+    transition: color var(--animation-set);
+    &:hover,
+    &:focus {
+      color: var(--accent-text-color);
     }
-    &__link {
-      display: block;
-      padding-top: 32px;
-      padding-bottom: 32px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.14;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      color: var(--secondary-text-color);
-      transition: color var(--animation-set);
-        &:hover,
-        &:focus {
-          color: var(--accent-text-color);
-        }
-        &--current {
-          color: var(--accent-text-color);
-        }
+    &--current {
+      color: var(--accent-text-color);
     }
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: 45px;
+    display: flex;
+    visibility: visible;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 90px;
+    visibility: visible;
+  }
 }
 .auth-nav {
-  margin-left: auto;
-  display: flex;
-    &__item {
+  display: none;
+
+  &__item {
+    @media screen and (min-width: 768px) {
+      margin-left: 0;
+      margin-bottom: 8px;
+    }
+    @media screen and (min-width: 1200px) {
       margin-left: 30px;
+      margin-bottom: 0;
     }
-    &__phone-icon {
-      vertical-align: middle;
+  }
+  &__phone-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--primery-text-color);
+    transition: fill var(--animation-set);
+    .auth-nav__link:hover &,
+    .auth-nav__link:focus & {
+      fill: var(--accent-bg-color);
+    }
+    @media screen and (min-width: 768px) {
       width: 10px;
-      height: 16px;
+      height: 14px;
       margin-right: 10px;
-      fill: var(--primery-text-color);
-      transition: fill var(--animation-set);
-        .auth-nav__link:hover &,
-        .auth-nav__link:focus & {
-         fill: var(--accent-bg-color);
-        }
     }
-    &__mail-icon {
-      vertical-align: middle;
+    @media screen and (min-width: 1200px) {
       width: 16px;
       height: 16px;
       margin-right: 10px;
-      fill: var(--primery-text-color);
-      transition: fill var(--animation-set);
-        .auth-nav__link:hover &,
-        .auth-nav__link:focus & {
-          fill: var(--accent-bg-color);
-        }
-        
+      vertical-align: middle;
     }
-    &__link {
+  }
+  &__mail-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--primery-text-color);
+    transition: fill var(--animation-set);
+    .auth-nav__link:hover &,
+    .auth-nav__link:focus & {
+      fill: var(--accent-bg-color);
+    }
+    @media screen and (min-width: 768px) {
+      width: 14px;
+      height: 10px;
+      margin-right: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+  &__link {
+    line-height: 1.14;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--primery-text-color);
+    transition: color var(--animation-set);
+    &:hover,
+    &:focus {
+      color: var(--accent-text-color);
+    }
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+      font-size: 12px;
+    }
+    @media screen and (min-width: 1200px) {
       display: block;
       padding-top: 32px;
       padding-bottom: 32px;
-      font-weight: 500;
       font-size: 14px;
-      line-height: 1.14;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      color: var(--primery-text-color);
-      transition: color var(--animation-set);
-        &:hover,
-        &:focus {
-          color: var(--accent-text-color);
-        }
     }
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }

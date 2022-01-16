@@ -44,8 +44,8 @@
     position: absolute;
     width: 11px;
     height: 11px;
-    right: 18px;
-    top: 17px;
+    right: 8px;
+    top: 8px;
     fill: var(--modal-icons-color);
     transition: fill var(--animation-set);
     &:hover,
@@ -75,4 +75,3 @@
     transition: box-shadow var(--animation-set);
   }
 }
-

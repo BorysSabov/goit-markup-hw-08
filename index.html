@@ -24,19 +24,10 @@
     <!--Шапка сайта-->
     <header class="page-header">
       <div class="page-header__nav-page container">
+        <a href="/" class="site-nav__logo">
+          <span class="site-nav__logo--accent">Web</span>Studio</a
+        >
         <nav class="site-nav">
-          <a href="/" class="site-nav__logo">
-            <span class="site-nav__logo--accent">Web</span>Studio</a
-          >
-          <!-- Mobile-menu -->
-          <!-- <div class="container">
-            <button type="button" class="menu-button">
-              <svg>
-                <use href="./img/SVG/mo"></use>
-              </svg>
-            </button>
-            <div class="menu-container" id="menu-container" data-menu></div>
-          </div> -->
           <ul class="link-nav">
             <li class="link-nav__item">
               <a
@@ -53,7 +44,11 @@
             </li>
           </ul>
         </nav>
-
+        <button class="mobile-menu">
+          <svg class="mobile-menu__icon">
+            <use href="./img/SVG/mobile-menu-spt.svg#icon-burger"></use>
+          </svg>
+        </button>
         <ul class="auth-nav">
           <li class="auth-nav__item">
             <a href="mailto:info@devstudio.com" class="auth-nav__link">
@@ -84,14 +79,12 @@
 
       <div class="backdrop is-hidden" data-modal>
         <div class="backdrop-modal">
-          <button
-            class="backdrop-modal__button"
-            type="button"
-            data-modal-close
-          ></button>
-          <svg class="backdrop-modal__icon">
-            <use href="./img/SVG/modal-close-spt.svg#icon-Close-modal"></use>
-          </svg>
+          <button class="backdrop-modal__button" type="button" data-modal-close>
+            <svg class="backdrop-modal__icon">
+              <use href="./img/SVG/modal-close-spt.svg#icon-Close-modal"></use>
+            </svg>
+          </button>
+
           <form class="form">
             <span class="form__title"
               >Оставьте свои данные, мы вам перезвоним</span

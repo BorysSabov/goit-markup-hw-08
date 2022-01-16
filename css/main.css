@@ -152,15 +152,56 @@ ol {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 1px solid var(--header-bottom-border);
 }
 
 .site-nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  display: block;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
   position: relative;
+  top: 0;
+  right: 0;
+  border: unset;
+  background-color: var(--primary-background-color);
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu__icon {
+    display: none;
+  }
 }
 
 .site-nav__logo {
@@ -171,14 +212,6 @@ ol {
   line-height: 1.2;
   text-decoration: none;
   color: var(--secondary-text-color);
-}
-
-.link-nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 90px;
 }
 
 .link-nav__item {
@@ -208,23 +241,45 @@ ol {
   color: var(--accent-text-color);
 }
 
-.auth-nav {
-  margin-left: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .link-nav {
+    margin-left: 45px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible;
+  }
 }
 
-.auth-nav__item {
-  margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  .link-nav {
+    margin-left: 90px;
+    visibility: visible;
+  }
+}
+
+.auth-nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .auth-nav__item {
+    margin-left: 0;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav__item {
+    margin-left: 30px;
+    margin-bottom: 0;
+  }
 }
 
 .auth-nav__phone-icon {
-  vertical-align: middle;
-  width: 10px;
+  width: 16px;
   height: 16px;
-  margin-right: 10px;
   fill: var(--primery-text-color);
   -webkit-transition: fill var(--animation-set);
   -o-transition: fill var(--animation-set);
@@ -236,11 +291,26 @@ ol {
   fill: var(--accent-bg-color);
 }
 
+@media screen and (min-width: 768px) {
+  .auth-nav__phone-icon {
+    width: 10px;
+    height: 14px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav__phone-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
+
 .auth-nav__mail-icon {
-  vertical-align: middle;
   width: 16px;
   height: 16px;
-  margin-right: 10px;
   fill: var(--primery-text-color);
   -webkit-transition: fill var(--animation-set);
   -o-transition: fill var(--animation-set);
@@ -252,12 +322,24 @@ ol {
   fill: var(--accent-bg-color);
 }
 
+@media screen and (min-width: 768px) {
+  .auth-nav__mail-icon {
+    width: 14px;
+    height: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav__mail-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
+
 .auth-nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
   letter-spacing: 0.02em;
@@ -271,9 +353,41 @@ ol {
   color: var(--accent-text-color);
 }
 
+@media screen and (min-width: 768px) {
+  .auth-nav__link {
+    display: inline-block;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .auth-nav {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .hero {
-  width: 480px;
-  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.502)), to(rgba(47, 48, 58, 0.502))), url(../img/bcgimage-hero.jpg);
@@ -291,7 +405,6 @@ ol {
   margin: 0 auto;
   margin-bottom: 30px;
   width: 360px;
-  padding-top: 118px;
   font-size: 26px;
   font-weight: 900;
   line-height: 1.6em;
@@ -336,19 +449,20 @@ ol {
   background-color: var(--accent-bg-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) {
   .hero {
-    width: 768px;
-    height: 400px;
     -webkit-background-size: cover;
             background-size: cover;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.502)), to(rgba(47, 48, 58, 0.502))), url(../img/bcgimage-hero.jpg);
+    background-image: -webkit-linear-gradient(rgba(47, 48, 58, 0.502), rgba(47, 48, 58, 0.502)), url(../img/bcgimage-hero.jpg);
+    background-image: -o-linear-gradient(rgba(47, 48, 58, 0.502), rgba(47, 48, 58, 0.502)), url(../img/bcgimage-hero.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.502), rgba(47, 48, 58, 0.502)), url(../img/bcgimage-hero.jpg);
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   .hero {
-    width: 1600px;
-    height: 600px;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     -webkit-background-size: cover;
@@ -1521,8 +1635,8 @@ ol {
   position: absolute;
   width: 11px;
   height: 11px;
-  right: 18px;
-  top: 17px;
+  right: 8px;
+  top: 8px;
   fill: var(--modal-icons-color);
   -webkit-transition: fill var(--animation-set);
   -o-transition: fill var(--animation-set);
