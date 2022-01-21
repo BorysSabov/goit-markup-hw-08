@@ -1,9 +1,18 @@
 .btn {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
   &__item:not(:last-child) {
     margin-right: 8px;
+    margin-bottom: 15px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
   }
   &__button {
     min-width: 73px;
