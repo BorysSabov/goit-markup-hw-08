@@ -21,22 +21,28 @@
   }
 }
 
-.footer-box__logo {
-  display: block;
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: Raleway, sans-serif;
-  font-size: 26px;
-  line-height: 1.2;
-  text-decoration: none;
-  color: var(--primary-background-color);
-  &--accent {
-    color: var(--accent-text-color);
-  }
+.footer-box {
+  margin-bottom: 60px;
+  &__logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: var(--primary-background-color);
+    &--accent {
+      color: var(--accent-text-color);
+    }
 
+    @media screen and (min-width: 1200px) {
+      width: 231px;
+      text-align: start;
+    }
+  }
   @media screen and (min-width: 1200px) {
-    width: 231px;
-    text-align: start;
+    margin-bottom: 0;
   }
 }
 .adress {
@@ -47,12 +53,10 @@
   font-style: normal;
 }
 .auth-footer {
-  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 60px;
   &__info:not(:last-child) {
     margin-bottom: 9px;
   }
@@ -68,10 +72,10 @@
       color: var(--accent-text-color);
     }
   }
+  
   @media screen and (min-width: 1200px) {
     display: block;
     width: 100%;
-    padding: 0;
   }
 }
 .footer-social {
@@ -80,7 +84,19 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
+  margin-bottom: 60px;
+  height: auto;
+  @media screen and (min-width: 768px) {
+    min-height: 130px;
+    justify-content: flex-start;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-left: 70px;
+    display: block;
+    text-align: start;
+    height: auto;
+  }
   &__title {
     margin-top: 0;
     margin-bottom: 20px;
@@ -127,22 +143,12 @@
       fill: var(--primary-background-color);
     }
   }
-  @media screen and (min-width: 768px) {
-    height: 212px;
-    justify-content: start;
-    padding-top: 12px;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-left: 70px;
-    display: block;
-    text-align: start;
-    height: auto;
-  }
 }
 .footer-submit {
   display: flex;
   flex-direction: column;
   width: 100%;
+
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1200px) {
@@ -150,18 +156,17 @@
   }
   &__text {
     display: block;
-    padding-top: 60px;
-    margin: 0 auto 20px auto;
+    margin-bottom: 20px;
+    text-align: center;
     font-weight: bold;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--primary-background-color);
     @media screen and (min-width: 768px) {
-      padding-top: 0;
     }
     @media screen and (min-width: 1200px) {
-      margin: 14px auto 20px 0;
+      text-align: start;
     }
   }
   &__form {

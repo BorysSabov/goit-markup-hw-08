@@ -25,6 +25,7 @@
     margin: 15px;
   }
   &__link {
+    min-width: 210px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,10 +38,10 @@
       border-color: var(--accent-bg-color);
     }
     @media screen and (min-width: 768px) {
-      width: 226px;
+      min-width: 226px;
     }
     @media screen and (min-width: 1200px) {
-      width: 170px;
+      min-width: 170px;
     }
   }
   &__icon {
